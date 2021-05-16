@@ -9,16 +9,14 @@ class Autoencoder(nn.Module):
             nn.ReLU(),
             nn.Linear(in_features=22, out_features=15),
             nn.ReLU(),
-            nn.Linear(in_features=15, out_features=10),
-            nn.ReLU()
+            nn.Linear(in_features=15, out_features=10)
         )
         self.dec = nn.Sequential(
             nn.Linear(in_features=10, out_features=15),
             nn.ReLU(),
             nn.Linear(in_features=15, out_features=22),
             nn.ReLU(),
-            nn.Linear(in_features=22, out_features=29),
-            nn.ReLU()
+            nn.Linear(in_features=22, out_features=29)
         )
 
     def get_enc(self, x):

@@ -1,6 +1,5 @@
 name: fraud_detection
 channels:
-  - pytorch
   - rapidsai
   - nvidia
   - conda-forge
@@ -227,7 +226,6 @@ dependencies:
   - python=3.8.8=hdb3f193_5
   - python-dateutil=2.8.1=py_0
   - python_abi=3.8=1_cp38
-  - pytorch=1.8.0=cpu_py38hd248515_1
   - pytz=2021.1=pyhd8ed1ab_0
   - pyviz_comms=2.0.1=pyhd3deb0d_0
   - pyyaml=5.4.1=py38h497a2fe_0
@@ -257,8 +255,6 @@ dependencies:
   - tiledb=2.2.9=h91fcb0e_0
   - tk=8.6.10=hbc83047_0
   - toolz=0.11.1=py_0
-  - torchaudio=0.8.0=py38
-  - torchvision=0.9.0=py38h3f3a366_0_cpu
   - tornado=6.1=py38h497a2fe_1
   - tqdm=4.60.0=pyhd8ed1ab_0
   - traitlets=5.0.5=py_0
@@ -300,5 +296,8 @@ dependencies:
   - pip:
     - imbalanced-learn==0.7.0
     - pyloras==0.1.0b1
+    - torch==1.8.1+cu111
+    - torchaudio==0.8.1
+    - torchvision==0.9.1+cu111
     - treelite-runtime==1.1.0
 prefix: /home/rosti/anaconda3/envs/fraud_detection
