@@ -2,11 +2,11 @@ import numpy as np
 import loras
 
 
-def get_noised_data(data):
+def get_noised_data(data, noise_str):
     mean = 0
-    var = 0.5
+    var = 1
     noise = np.random.normal(mean, var, size=data.shape).astype(np.float32)
-    return data + noise
+    return data + noise_str*noise
 
 
 def label_dist(data_df):

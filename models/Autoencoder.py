@@ -6,16 +6,12 @@ class Autoencoder(nn.Module):
         super().__init__()
         self.enc = nn.Sequential(
             nn.Linear(in_features=29, out_features=22),
-            nn.ReLU(),
             nn.Linear(in_features=22, out_features=15),
-            nn.ReLU(),
             nn.Linear(in_features=15, out_features=10)
         )
         self.dec = nn.Sequential(
             nn.Linear(in_features=10, out_features=15),
-            nn.ReLU(),
             nn.Linear(in_features=15, out_features=22),
-            nn.ReLU(),
             nn.Linear(in_features=22, out_features=29)
         )
 
