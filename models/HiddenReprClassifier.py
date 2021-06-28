@@ -5,7 +5,7 @@ class HiddenReprClassifier(nn.Module):
     def __init__(self):
         super().__init__()
         self.classifier = nn.Sequential(
-            nn.Linear(in_features=10, out_features=5),
+            nn.Linear(in_features=15, out_features=5),
             nn.ReLU(),
             nn.Linear(in_features=5, out_features=2)
         )
